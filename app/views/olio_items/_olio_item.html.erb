@@ -1,9 +1,24 @@
-<div>
-  <hr>
-  <p><%= item["title"] %></p>
-  <p><%= item["description"] %></p>
-  <p><%= item["id"] %></p>
-  <div><%= render 'form', item: item %></div>
-  <div><%= item["reactions"]["likes"] %> Likes</div>
-  <hr>
+<div class="card">
+  <div class="card-header">
+    <img src="<%= item["photos"][0]["files"]["medium"] %>"/>
+  </div>
+  <div class="card-body">
+    <div class="like-section">
+      <div class="tag tag-teal"><%= item["reactions"]["likes"] %> Likes</div>
+      <div class="like-button"><%= render 'form', item: item %></div>
+    </div>
+    <h4>
+      <%= item["title"] %>
+    </h4>
+    <p>
+      <%= item["description"] %>
+    </p>
+    <div class="user">
+      <img src="<%= item["user"]["current_avatar"]["small"] %>" />
+      <div class="user-info">
+        <h5><%= item["user"]["first_name"] %></h5>
+        <small><%= item["user"]["roles"].sample %></small>
+      </div>
+    </div>
+  </div>
 </div>

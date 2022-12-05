@@ -1,7 +1,17 @@
-<h1>OlioItems#index</h1>
-<p>Find me in app/views/olio_items/index.html.erb</p>
-<div>
-  <% @olio_items.each do |olio_item| %>
-    <%= render 'olio_item', item: olio_item %>
-  <% end %>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+<div class="header">
+  <h1>Olio Items</h1>
+  <p>Here is a list of Olio items for you to review</p>
 </div>
+<div>
+  <div class="container">
+    <% @olio_items.each do |olio_item| %>
+      <%= render 'olio_item', item: olio_item  %>
+    <% end %>
+  </div>
+</div>
+
