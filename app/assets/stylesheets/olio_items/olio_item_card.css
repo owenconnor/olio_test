@@ -95,3 +95,15 @@ body {
 .header {
     margin-left: 30px;
 }
+
+.alert {
+    border-color: #D6E9C6;
+    color: white;
+    padding: 10px;
+}
+.alert-success {
+    background-color: green;
+}
+.alert-notice {
+    background-color: yellow;
+}
