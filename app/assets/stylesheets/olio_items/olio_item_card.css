@@ -61,12 +61,6 @@ body {
     background-color: #47bcd4;
     display: inline-block;
 }
-/*.tag-purple {*/
-/*    background-color: #5e76bf;*/
-/*}*/
-/*.tag-pink {*/
-/*    background-color: #cd5b9f;*/
-/*}*/
 
 .card-body p {
     font-size: 13px;
@@ -90,9 +84,6 @@ body {
     color: #545d7a;
 }
 
-.like-section {
-    /*display: inline-block;*/
-}
 .like-button {
     font-size: 12px;
     display: inline-block;
