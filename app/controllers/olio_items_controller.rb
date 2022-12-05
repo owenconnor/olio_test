@@ -1,13 +1,11 @@
+# # app/controllers/olio_items_controller.rb
 class OlioItemsController < ApplicationController
+  # GET /index
+  # This action will render the index pageview app/views/olio_items/index.html.erb
+  # We populate the @olio_items instance variable with the return value of the
+  # method display_olio_items in the service object OlioItemsApi
+  # @return [JSON]
   def index
-    @olio_items = fetch_olio_items
-  end
-
-  def fetch_olio_items
-    response = HTTParty.get('https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/test-articles-v4.json')
-    JSON.parse(response.body).each do |item|
-      like_count = Like.where(liked_item_id: item["id"]).try(:count).to_i
-      item["reactions"]["likes"] = like_count
-    end
+    @olio_items = OlioItemsApi.new.display_olio_items
   end
 end
