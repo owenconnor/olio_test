@@ -1,0 +1,9 @@
+<div>
+  <hr>
+  <p><%= item["title"] %></p>
+  <p><%= item["description"] %></p>
+  <p><%= item["id"] %></p>
+  <div><%= render 'form', item: item %></div>
+  <div><%= item["reactions"]["likes"] %> Likes</div>
+  <hr>
+</div>

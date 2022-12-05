@@ -1,0 +1,6 @@
+<form action="/likes" method="post">
+  <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+  <input type="hidden" name="like[liked_item_id]" value="<%= item["id"] %>">
+  <input type="hidden" name="like[liked_item_type]" value="<%= "olio_item" %>">
+  <input type="submit" value="Like">
+</form>
