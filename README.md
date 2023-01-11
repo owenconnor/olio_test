@@ -16,6 +16,8 @@ If successful follow that with the command `bundle install`. This will install t
 ### Configure the Database
 From within that directory type the command `rails db:test:create` in order to set up a SQLite Database which you can use locally for viewing the app.
 After that use the command `rails db:migrate` to update the database structure to the schema required for the application to function.
+Alternatively you can use the command `rails db:setup` which will perform both of the above commands.
+Alternatively you can use the command `rails db:prepare` which will perform both of the above commands along with running the seed file, if there was one.
 
 ### Start the server
 To start the rails server type `rails s` in the terminal. This will create a rails server and enable you to use the application via the browser.
@@ -27,7 +29,7 @@ In your browser navigate to `http://localhost:3000/olio_items/index`. You should
 
 ### Tests
 A number of tests have been written in order to ensure the application operates as intended. And should any changes be made which break it we are warned.
-if you widh you can run the tests by using the command `rspec`
+if you wish you can run the tests by using the command `rspec`.
 
 ### Documentation
 Some basic documentation has been complied for this application and you can view it by using a tool called Yard. If you run the command `yard` followed by `yard server` and navigate to `http://localhost:8808` in you browser you can navigate the documentation.

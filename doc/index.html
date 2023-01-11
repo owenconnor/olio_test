@@ -60,32 +60,43 @@
       <div id="content"><div id='filecontents'>
 <h1 id="label-README">README</h1>
 
-<p>This README would normally document whatever steps are necessary to get the application up and running.</p>
+<h2 id="label-Setup">Setup</h2>
 
-<p>Things you may want to cover:</p>
-<ul><li>
-<p>Ruby version</p>
-</li><li>
-<p>System dependencies</p>
-</li><li>
-<p>Configuration</p>
-</li><li>
-<p>Database creation</p>
-</li><li>
-<p>Database initialization</p>
-</li><li>
-<p>How to run the test suite</p>
-</li><li>
-<p>Services (job queues, cache servers, search engines, etc.)</p>
-</li><li>
-<p>Deployment instructions</p>
-</li><li>
-<p>...</p>
-</li></ul>
+<p>In order to run this application locally you&#39;ll need to follow these steps:</p>
+
+<h3 id="label-Clone+the+application+from+github">Clone the application from github</h3>
+
+<p>Within your terminal navigate to the directory where you wish to save the application locally and type <code>git clone git@github.com:owenconnor/olio_test.git</code> That command will save the application into the folder “olio_test”. Navigate into that directory.</p>
+
+<h3 id="label-Bundle">Bundle</h3>
+
+<p>In order to ensure that the gems used in the application are installed locally and up to date the Bundler tool is used. Type the command <code>gem install bundler</code>. If successful follow that with the command <code>bundle install</code>. This will install the required gems (libraries) on your system.</p>
+
+<h3 id="label-Configure+the+Database">Configure the Database</h3>
+
+<p>From within that directory type the command <code>rails db:test:create</code> in order to set up a SQLite Database which you can use locally for viewing the app. After that use the command <code>rails db:migrate</code> to update the database structure to the schema required for the application to function. Alternatively you can use the command <code>rails db:setup</code> which will perform both of the above commands. Alternatively you can use the command <code>rails db:prepare</code> which will perform both of the above commands along with running the seed file, if there was one.</p>
+
+<h3 id="label-Start+the+server">Start the server</h3>
+
+<p>To start the rails server type <code>rails s</code> in the terminal. This will create a rails server and enable you to use the application via the browser.</p>
+
+<h3 id="label-Navigate+in+Browser">Navigate in Browser</h3>
+
+<p>In your browser navigate to <code>http://localhost:3000/olio_items/index</code>. You should see a list of Olio items which you can look over. You can choose to add a “like” to any Olio item by clicking the like button on any item.</p>
+
+<h2 id="label-Additional+options">Additional options</h2>
+
+<h3 id="label-Tests">Tests</h3>
+
+<p>A number of tests have been written in order to ensure the application operates as intended. And should any changes be made which break it we are warned. if you wish you can run the tests by using the command <code>rspec</code>.</p>
+
+<h3 id="label-Documentation">Documentation</h3>
+
+<p>Some basic documentation has been complied for this application and you can view it by using a tool called Yard. If you run the command <code>yard</code> followed by <code>yard server</code> and navigate to <code>http://localhost:8808</code> in you browser you can navigate the documentation.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Mon Dec  5 16:03:47 2022 by
+  Generated on Wed Jan 11 17:44:22 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
