@@ -12,9 +12,9 @@ RSpec.describe LikesController, type: :controller do
         }.to change(Like, :count).by(1)
       end
 
-      it 'redirects to the olio_items_index_path' do
+      it 'redirects to the olio_items_path' do
         post :create, params: valid_post_params
-        expect(response).to redirect_to(olio_items_index_path)
+        expect(response).to redirect_to(olio_items_path)
         expect(flash[:success]).to match(/You successfully liked a product/)
       end
     end
@@ -26,9 +26,9 @@ RSpec.describe LikesController, type: :controller do
         }.to change(Like, :count).by(0)
       end
 
-      it 'redirects to the olio_items_index_path' do
+      it 'redirects to the olio_items_path' do
         post :create, params: invalid_post_params
-        expect(response).to redirect_to(olio_items_index_path)
+        expect(response).to redirect_to(olio_items_path)
         expect(flash[:notice]).to match(/We could not record your like*/)
       end
     end

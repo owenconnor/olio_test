@@ -5,7 +5,7 @@ class LikesController < ApplicationController
   # app/views/olio_items/_olio_item.html.erb
   # to create a like object each time the form is submitted
   # eg "like" button clicked
-  # It then redirects to the olio_items_index_path which will
+  # It then redirects to the olio_items_path which will
   # display a a list of the olio items with the like count updated
   # if successful
   # @param [Integer] liked_item_id
@@ -18,7 +18,7 @@ class LikesController < ApplicationController
     else
       flash[:notice] = "We could not record your like, #{@like.errors.full_messages.to_sentence}"
     end
-    redirect_to olio_items_index_path
+    redirect_to olio_items_path
   end
 
   private
